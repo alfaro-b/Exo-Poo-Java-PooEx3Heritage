@@ -10,6 +10,8 @@ public class Commercial extends Person{
 	
 	// Valeur minimale facilement modifiable
     private static final double MIN_PERCENTAGE_CA = 0.0;
+    // Chiffre d'affaire moyen de 50000
+    private static final double CA = 50000.0;
 	
     // =========================
     // CONSTRUCTEUR
@@ -99,4 +101,15 @@ public class Commercial extends Person{
 				"Entreprise : " + this.getCompany() + ", " +
 				"%CA : " + this.getPercentageCA();
 	}
+	
+	/**
+	 * Calcule la rémunération d'un commercial.
+	 * Pourcentage du CA
+	 */
+	@Override
+	public  double remuneration() {
+		double remuneration = this.percentageCA / 100 * CA;
+		return remuneration;
+	};
+	
 }

@@ -20,12 +20,23 @@ public class TestEntities {
 		entities.add(musk);
 		entities.add(dupont);
 		
+		// Ex3.6 Affichage des infos à partir d'une liste d'objets qui peuvent être des employés ou des commerciaux
 		System.out.println("Ex3.6 Affichage des infos à partir d'une liste d'objets");
 		System.out.println();
 		for (Object entity: entities) {
 			if(entity instanceof Employee) System.out.println(((Employee) entity).displayInfosWithoutPopulation());
 			else if (entity instanceof Commercial) System.out.println(((Commercial) entity).displayInfosWithoutPopulation());
 		}
+		System.out.println();
+
+		// Ex3.7 Affichage réduit avec nom, prénom et salaire calculé en fonction de la méthode rémuneration
+		System.out.println("Ex3.7 Affichage partiel à partir d'une liste d'objets");
+		System.out.println();
+		for (Object entity: entities) {
+			if(entity instanceof Employee) System.out.println(((Employee) entity).displayRemuneration());
+			else if (entity instanceof Commercial) System.out.println(((Commercial) entity).displayRemuneration());
+		}
+		System.out.println();
 	}
 
 }

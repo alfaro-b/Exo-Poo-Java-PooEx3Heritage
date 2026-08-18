@@ -1,10 +1,10 @@
 package fr.fms.entities;
 
 /**
- * Représente une personne avec son nom, son prénom, son âge, son adresse et
- * éventuellement sa ville de naissance.
+ * Représente une personne avec son nom, son prénom, son âge, son adresse et éventuellement sa ville de naissance.
+ * Classe abstraite
  */
-public class Person {
+public abstract class Person {
 
 	// =========================
 	// ATTRIBUTS
@@ -180,6 +180,21 @@ public class Person {
 
 		return result;
 	}
+	
+	/**
+	 * Méthode abstraite pour calculer la rémunération.
+	 */
+	public abstract double remuneration();
+	
+	/**
+	 * Méthode pour afficher la rémunération.
+	 */
+	public String displayRemuneration() {
+		return "Salaire mensuel de " + 
+				this.firstName + " " +
+				this.name + " : " +
+				this.remuneration();
+	};
 
 }
 

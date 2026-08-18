@@ -10,6 +10,8 @@ public class Employee extends Person{
 	
 	// Valeur minimale facilement modifiable
     private static final double MIN_SALARY = 0.0;
+    // Charges de 20%
+    private static final double TAXES = 0.2;
 	
     // =========================
     // CONSTRUCTEUR
@@ -90,6 +92,7 @@ public class Employee extends Person{
 	public String toString() {
 		return super.toString() + ", Entreprise : " + this.company + ", " + "salaire : " + this.salary;
 	}
+	
 	public String displayInfosWithoutPopulation() {
 		return this.getName() + ", " +
 				this.getFirstName() + ", " +
@@ -99,4 +102,15 @@ public class Employee extends Person{
 				"Entreprise : " + this.getCompany() + ", " +
 				"salaire : " + this.getSalary();
 	}
+	
+	/**
+	 * Calcule la rémunération d'un employé.
+	 * Salaire - charges en considérant que les charges sont de 20%
+	 */
+	@Override
+	public  double remuneration() {
+		double remuneration = this.salary * (1 - TAXES);
+		return remuneration;
+	};
+	
 }
