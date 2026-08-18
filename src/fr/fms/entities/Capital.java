@@ -59,4 +59,13 @@ public class Capital extends City{
 		return super.toString() + " monument : " + monument + " ";
 	}
 
+	/**
+     * Retourne le nom et le pays d'une ville de naissance.
+     *
+     * @return les informations de la ville de naissance
+     */
+	public String getBirthCityInfo() {	
+	    return super.getBirthCityInfo() +
+	    		" monument : " + monument + " ";
+	}
 }

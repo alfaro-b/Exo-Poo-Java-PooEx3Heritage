@@ -127,24 +127,6 @@ public class City {
     // =========================
 	
 	/**
-     * Affiche les informations détaillées de la ville.
-     */
-	public void displayDetails() {
-		System.out.println(
-				"[Ville : " + this.name + "] " + 
-				"[Pays : " + this.country + "] " + 
-				"[Nombre d'habitants : " + this.population + "] " );
-	}
-	/**
-     * Affiche les informations de la ville sous forme de phrase.
-     */
-	public void display() {
-		System.out.println(
-				"Ville de " + this.name + 
-				" en " + this.country + 
-				" ayant " + this.population + " habitants " );
-	}
-	/**
      * Retourne une représentation textuelle de la ville.
      *
      * @return les informations de la ville sous forme de phrase
@@ -157,19 +139,13 @@ public class City {
 	}
 
 	/**
-     * Retourne les informations sur une ville de naissance.
-     * La population est ajoutée uniquement si elle est connue.
+     * Retourne le nom et le pays d'une ville de naissance.
      *
      * @return les informations de la ville de naissance
      */
-	public String getBirthCityPersonality() {
-		String result = "Ville de naissance : " + this.name + ", " +
+	public String getBirthCityInfo() {	
+	    return "Ville de naissance : " + this.name + ", " +
 		           this.country;
-		String population = ", population " + this.name + " " + this.population + " habitants";
-		if (this.population != 0) {
-			result += population;
-		}
-	    return result;
 	}
 	
 }

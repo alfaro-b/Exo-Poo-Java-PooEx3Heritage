@@ -90,4 +90,13 @@ public class Employee extends Person{
 	public String toString() {
 		return super.toString() + ", Entreprise : " + this.company + ", " + "salaire : " + this.salary;
 	}
+	public String displayInfosWithoutPopulation() {
+		return this.getName() + ", " +
+				this.getFirstName() + ", " +
+				this.getAge() + "ans, " +
+				"habitant " + this.getAddress()+ ", " +
+				this.getBirthCity().getBirthCityInfo() + ", " +
+				"Entreprise : " + this.getCompany() + ", " +
+				"salaire : " + this.getSalary();
+	}
 }

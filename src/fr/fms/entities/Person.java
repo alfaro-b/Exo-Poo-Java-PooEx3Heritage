@@ -181,25 +181,5 @@ public class Person {
 		return result;
 	}
 
-	/**
-	 * Affiche les informations détaillées de la personne.
-	 */
-	public void displayPersonalities() {
-		String result = this.name + ", " + this.firstName + ", " + this.age + "ans, " + "habitant " + this.address;
-		if (this.birthCity != null) {
-			result += ", " + this.birthCity.getBirthCityPersonality();
-		}
-		System.out.println(result);
-	}
-
-	/**
-	 * Affiche la personne si elle est née en France ou si son adresse contient "Paris".
-	 */
-	public void displayFilterPersonalities() {
-	    if ((this.birthCity != null && this.birthCity.getCountry().equalsIgnoreCase("France"))
-	            || (this.address != null && this.address.toLowerCase().contains("paris"))) {
-	        displayPersonalities();
-	    }
-	}
 }
 

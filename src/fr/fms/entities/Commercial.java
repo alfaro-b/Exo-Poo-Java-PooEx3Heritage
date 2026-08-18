@@ -56,7 +56,7 @@ public class Commercial extends Person{
      *
      * @return Le pourcentage du CA
      */
-	public double getPercentageCAy() {
+	public double getPercentageCA() {
 		return percentageCA;
 	}
     /**
@@ -88,5 +88,15 @@ public class Commercial extends Person{
 	@Override
 	public String toString() {
 		return super.toString() + ", Entreprise : " + this.company + ", " + "% CA : " + this.percentageCA;
+	}
+	
+	public String displayInfosWithoutPopulation() {
+		return this.getName() + ", " +
+				this.getFirstName() + ", " +
+				this.getAge() + "ans, " +
+				"habitant " + this.getAddress()+ ", " +
+				this.getBirthCity().getBirthCityInfo() + ", " +
+				"Entreprise : " + this.getCompany() + ", " +
+				"salaire : " + this.getPercentageCA();
 	}
 }

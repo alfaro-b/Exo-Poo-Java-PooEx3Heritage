@@ -33,6 +33,13 @@ public class TestEmployee {
 		System.out. println(dupont3);
 		System.out. println();
 		
+		// Ex3.5 
+		System.out. println("Ex3.5");
+		System.out. println(gate);
+		System.out. println("Affichage sans la population : ");
+		System.out. println(gate.displayInfosWithoutPopulation());
+		System.out. println();
+		
 	}
 
 }
