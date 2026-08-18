@@ -97,6 +97,6 @@ public class Commercial extends Person{
 				"habitant " + this.getAddress()+ ", " +
 				this.getBirthCity().getBirthCityInfo() + ", " +
 				"Entreprise : " + this.getCompany() + ", " +
-				"salaire : " + this.getPercentageCA();
+				"%CA : " + this.getPercentageCA();
 	}
 }

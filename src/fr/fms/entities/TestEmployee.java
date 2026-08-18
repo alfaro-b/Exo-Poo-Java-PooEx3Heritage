@@ -16,7 +16,7 @@ public class TestEmployee {
 		Commercial dupont2 = new Commercial("Dupont", "Robert", 50, "rue des rosiers à Toulouse", new City("Limoges", "France", 133000), "brico", -3.0);
 		Employee dupont3 = new Employee("Dupont", "Robert", 50, "rue des rosiers à Toulouse", new City("Limoges", "France", 133000), "brico", -1000.0);
 		
-		// Ex3.2 Affichage des emplyés
+		// Ex3.2 Affichage des employés
 		System.out. println("Ex3.2");
 		System.out.println(gate);
 		System.out. println(musk);
@@ -29,8 +29,8 @@ public class TestEmployee {
 		
 		// Ex3.4 Affichage des commerciaux et employés avec salaire ou %CA saisie négatif
 		System.out. println("Ex3.4");
-		System.out. println(dupont2);
-		System.out. println(dupont3);
+		System.out. println(dupont2); // commercial
+		System.out. println(dupont3); // employé
 		System.out. println();
 		
 		// Ex3.5 
