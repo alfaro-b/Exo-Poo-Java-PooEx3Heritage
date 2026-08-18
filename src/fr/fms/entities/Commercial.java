@@ -8,6 +8,13 @@ public class Commercial extends Person{
 	private String company;
 	private double percentageCA;
 	
+	// Valeur minimale facilement modifiable
+    private static final double MIN_PERCENTAGE_CA = 0.0;
+	
+    // =========================
+    // CONSTRUCTEUR
+    // =========================
+    
     /**
      * Crée un commercial.
      *
@@ -18,10 +25,10 @@ public class Commercial extends Person{
      * @param company Entreprise dans laquelle travaille le commercial
      * @param salary Salaire du commercial
      */
-	public Commercial(String name, String firstName, int age, String address, City birthCity, String company, double salary) {
+	public Commercial(String name, String firstName, int age, String address, City birthCity, String company, double percentageCA) {
 		super(name, firstName, age, address, birthCity);
 		this.company = company;
-		this.percentageCA = salary;
+		setPercentageCA(percentageCA);
 	}
 
     // =========================
@@ -53,12 +60,19 @@ public class Commercial extends Person{
 		return percentageCA;
 	}
     /**
-     * Modifie la rémunération (càd le pourcetage du CA) du commercial.
+     * Modifie la rémunération (càd le pourcentage du CA) du commercial.
      *
-     * @param percentageCA nouveau salairepourcentage du CA
+     * @param percentageCA pourcentage du CA
      */
 	public void setPercentageCA(double percentageCA) {
-		this.percentageCA = percentageCA;
+		if (percentageCA < MIN_PERCENTAGE_CA) {
+			System.out.println("MESSAGE : ");
+			System.out.println("% du chiffre d'affaire inférieur à 0 impossible");
+			System.out.println("------------------------------------------------");
+			this.percentageCA = MIN_PERCENTAGE_CA;
+		} else {
+			this.percentageCA = percentageCA;
+		}
 	}
 	
 	// =========================
@@ -67,7 +81,7 @@ public class Commercial extends Person{
 
     /**
      * Retourne les informations du commercial,
-     * en complétant celles héritées de Person avec son entreprise et sa rémunération ( pourcentage du CA).
+     * en complétant celles héritées de Person avec son entreprise et sa rémunération (pourcentage du CA).
      *
      * @return les informations du commercial
      */

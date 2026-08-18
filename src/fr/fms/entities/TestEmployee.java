@@ -13,6 +13,8 @@ public class TestEmployee {
 		Employee musk = new Employee("Musk", "Elon", 49, "palo alto",new City("Pretoria", "Afrique du Sud", 800000), "Tesla", 150000.0);
 		
 		Commercial dupont = new Commercial("Dupont", "Robert", 50, "rue des rosiers à Toulouse", new City("Limoges", "France", 133000), "brico", 5.0);
+		Commercial dupont2 = new Commercial("Dupont", "Robert", 50, "rue des rosiers à Toulouse", new City("Limoges", "France", 133000), "brico", -3.0);
+		Employee dupont3 = new Employee("Dupont", "Robert", 50, "rue des rosiers à Toulouse", new City("Limoges", "France", 133000), "brico", -1000.0);
 		
 		// Ex3.2 Affichage des emplyés
 		System.out. println("Ex3.2");
@@ -23,6 +25,14 @@ public class TestEmployee {
 		// Ex3.3 Affichage des commerciaux
 		System.out. println("Ex3.3");
 		System.out. println(dupont);
+		System.out. println();
+		
+		// Ex3.4 Affichage des commerciaux et employés avec salaire ou %CA saisie négatif
+		System.out. println("Ex3.4");
+		System.out. println(dupont2);
+		System.out. println(dupont3);
+		System.out. println();
+		
 	}
 
 }

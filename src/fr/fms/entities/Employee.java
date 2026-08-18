@@ -8,6 +8,13 @@ public class Employee extends Person{
 	private String company;
 	private double salary;
 	
+	// Valeur minimale facilement modifiable
+    private static final double MIN_SALARY = 0.0;
+	
+    // =========================
+    // CONSTRUCTEUR
+    // =========================
+    
     /**
      * Crée un employé.
      *
@@ -21,7 +28,7 @@ public class Employee extends Person{
 	public Employee(String name, String firstName, int age, String address, City birthCity, String company, double salary) {
 		super(name, firstName, age, address, birthCity);
 		this.company = company;
-		this.salary = salary;
+		setSalary(salary);
 	}
 
     // =========================
@@ -58,7 +65,15 @@ public class Employee extends Person{
      * @param salary nouveau salaire
      */
 	public void setSalary(double salary) {
-		this.salary = salary;
+		if (salary < MIN_SALARY) {
+			System.out.println("MESSAGE : ");
+			System.out.println("Salaire inférieur à 0 impossible");
+			System.out.println("------------------------------------------------");
+			this.salary = MIN_SALARY;
+		} else {
+			this.salary = salary;
+		}
+		
 	}
 	
 	// =========================
