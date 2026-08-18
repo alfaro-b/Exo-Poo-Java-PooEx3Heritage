@@ -155,16 +155,7 @@ public class City {
 				this.country + ", " +
 				this.population + " d'habitants ";
 	}
-    /**
-     * Retourne les informations détaillées de la ville.
-     *
-     * @return les informations de la ville sous forme de chaîne de caractères
-     */
-	public String getDetails() {
-	    return "[name = " + this.name + ", " +
-	           "state = " + this.country + ", " +
-	           "NbInhabitants = " + this.population + "]";
-	}
+
 	/**
      * Retourne les informations sur une ville de naissance.
      * La population est ajoutée uniquement si elle est connue.
